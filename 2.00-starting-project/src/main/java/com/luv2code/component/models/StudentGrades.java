@@ -13,7 +13,7 @@ public class StudentGrades {
     /*
      * CAN HAVE MULTIPLE DIFFERENT TYPES OF GRADES
      * FOR 2.x WE WILL ONLY HAVE A MATH GRADE
-     *  */
+     */
 
     public StudentGrades() {
     }
@@ -44,23 +44,17 @@ public class StudentGrades {
 
         // add a round function
         BigDecimal resultRound = BigDecimal.valueOf(result);
-        resultRound = resultRound.setScale(2, RoundingMode.HALF_UP);
+        resultRound = resultRound.setScale(3, RoundingMode.HALF_UP);
         return resultRound.doubleValue();
 
     }
 
     public Boolean isGradeGreater(double gradeOne, double gradeTwo) {
-        if (gradeOne > gradeTwo) {
-            return true;
-        }
-        return false;
+        return gradeOne > gradeTwo;
     }
 
     public Object checkNull(Object obj) {
-        if ( obj != null ) {
-            return obj;
-        }
-        return null;
+        return obj;
     }
 
     public List<Double> getMathGradeResults() {
